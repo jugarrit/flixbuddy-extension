@@ -1,0 +1,9 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns": ["app/scripts", "node_modules", "dist", "package"]
+		}
+	]
+}
