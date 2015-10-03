@@ -1,1 +1,3 @@
-<a href="#" class="connect" ><%= firstName %> <%= lastName %></a>
+<div>
+	<%= firstName %> <%= lastName %> <a href="#" class="connect" >Connect</a>
+</div>

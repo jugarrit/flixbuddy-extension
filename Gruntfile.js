@@ -33,8 +33,8 @@ grunt.initConfig({
     // Watches files for changes and runs tasks based on the changed files
     watch: {
         dev: {
-            files: ['src/js/{,*/}*.js', 'app/styles/{,*/}*.css', 'src/templates/*.tpl', 'Gruntfile.js'],
-            tasks: ['browserify']
+            files: ['src/js/{,*/}*.js', 'src/stylesheets/{,*/}*.less', 'src/templates/*.tpl', 'Gruntfile.js'],
+            tasks: ['browserify', 'less']
         }
     },
 
@@ -184,11 +184,20 @@ grunt.initConfig({
             external: 'libs/supportkit-js/dist/supportkit.min.js'
         }
     },
+
+    less: {
+        styles: {
+            files: {
+                'app/styles/main.css': 'src/stylesheets/main.less'
+            }
+        }
+    }
 });
 
 grunt.registerTask('dev', function() {
     grunt.task.run([
         'browserify',
+        'less',
         'watch'
     ]);
 });
@@ -196,6 +205,7 @@ grunt.registerTask('dev', function() {
 grunt.registerTask('build', [
     'clean:dist',
     'browserify',
+    'less',
     'useminPrepare',
     'concurrent:dist',
     'copy',

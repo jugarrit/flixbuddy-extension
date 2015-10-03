@@ -36,7 +36,7 @@
     }
   ],
   "web_accessible_resources": [
-    "/scripts/sk-loader.js"
+    "/scripts/sk-loader.js", "/styles/custom.css"
   ],
   "permissions": [
     "http://bfe85653.ngrok.io/*"

@@ -1,6 +1,7 @@
 'use strict';
 
 var $ = require('jquery');
+var _ = require('underscore');
 
 function login(data) {
     return $.ajax({
@@ -31,15 +32,24 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             sendResponse({});
         });
     } else if (request.action === 'getUsers') {
-        console.log('getting users');
         getUsers().then(function(data) {
             sendResponse(data);
         });
     } else if (request.action === 'connect') {
         connect(request).then(function() {
-            sendResponse('success');
+            sendResponse(true);
         }).fail(function() {
-            sendResponse('failure');
+            sendResponse(false);
+        });
+    } else if (request.action === 'isLoggedIn') {
+        getUsers().then(function(users) {
+            if (_.some(users, function(user) {
+                        return user.appUserId === request.userId;
+                    })) {
+                sendResponse(true);
+            } else {
+                sendResponse(false);
+            }
         });
     } else {
         sendResponse({});

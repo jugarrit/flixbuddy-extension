@@ -19,8 +19,7 @@ function getUserId() {
         currentWindow: true
     }, function(tabs) {
         chrome.tabs.sendMessage(tabs[0].id, {
-            method: 'getLocalStorage',
-            key: 'sk_appuserid'
+            method: 'getLocalStorage'
         }, function(response) {
             var appUserId = response && response.data;
             deferred.resolve(appUserId);

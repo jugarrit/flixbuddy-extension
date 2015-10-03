@@ -1,0 +1,70 @@
+#sk-container #sk-wrapper {
+    border: 1px solid rgba(244, 244, 244, 1);
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px 10px 0 0;
+    color: #e50914;
+}
+#sk-container div#sk-wrapper {
+    background: rgba(255, 255, 255, 1);
+}
+#sk-container #sk-wrapper #sk-header {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+#sk-container #sk-wrapper #sk-header .fa {
+    color: #e50914;
+}
+#sk-container #sk-wrapper .sk-notifications {
+    border-top: 1px solid rgba(244, 244, 244, 1);
+    background-color: white;
+    box-shadow: none;
+}
+#sk-container #sk-wrapper [data-region-main] #sk-conversation .sk-intro {
+    color: #bfc3c8;
+}
+#sk-container #sk-wrapper [data-region-main] #sk-conversation .sk-row.sk-left-row .sk-msg-wrapper .sk-msg {
+    background-color: white;
+    color: #e50914;
+}
+#sk-container #sk-wrapper [data-region-main] #sk-conversation .sk-row .sk-msg-wrapper .sk-msg {
+    box-shadow: none;
+    border: 1px solid #e50914;
+}
+#sk-container #sk-wrapper [data-region-main] #sk-conversation .sk-row.sk-left-row .sk-msg-wrapper .sk-msg:after {
+    border-color: #ffffff;
+    border-right-color: #e50914;
+}
+#sk-container #sk-wrapper [data-region-main] #sk-conversation .sk-row.sk-right-row .sk-msg {
+    background-color: #e50914;
+}
+#sk-container #sk-wrapper [data-region-main] #sk-conversation .sk-row.sk-right-row .sk-msg:after {
+    border-color: #ffffff;
+    border-left-color: #e50914;
+}
+#sk-container #sk-wrapper [data-region-main] #sk-conversation .sk-row .sk-msg-wrapper .sk-msg:after {
+    border-color: #ffffff;
+    border-left-color: #e50914;
+}
+#sk-container #sk-wrapper [data-region-main] #sk-conversation .sk-row .sk-msg-wrapper .sk-from {
+    color: #000000;
+    font-weight: 700;
+}
+#sk-container #sk-wrapper [data-region-main] #sk-conversation .sk-logo a {
+    color: #bfc3c8;
+}
+#sk-container #sk-wrapper #sk-footer {
+    box-shadow: none;
+    border-top: 1px solid #f4f4f4;
+    background-color: white;
+}
+#sk-container #sk-wrapper .input {
+    background-color: #ffffff;
+    border: 1px solid #f4f4f4;
+}
+#sk-container #sk-wrapper #sk-footer .send {
+    color: #bfc3c8;
+    font-weight: 700;
+}
+#sk-container #sk-wrapper #sk-footer .send:hover {
+    color: #e50914;
+}
