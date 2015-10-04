@@ -39,6 +39,7 @@
     "/scripts/sk-loader.js", "/styles/custom.css"
   ],
   "permissions": [
-    "http://bfe85653.ngrok.io/*"
+    "http://bfe85653.ngrok.io/*",
+    "https://api.flixbuddy.co/*"
   ]
 }

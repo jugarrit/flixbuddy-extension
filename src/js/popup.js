@@ -52,13 +52,19 @@ function login(user) {
 }
 
 function showUsersView() {
+    var currentUser;
     var omitted = _(_.omit(userList, function(user) {
-        return user.appUserId === currentAppUserId;
+        if (user.appUserId === currentAppUserId) {
+            currentUser = user;
+            return true;
+        }
+        return false;
     })).toArray();
 
     var usersView = new UsersView({
         collection: new Backbone.Collection(omitted),
-        currentAppUserId: currentAppUserId
+        currentAppUserId: currentAppUserId,
+        currentUser: currentUser
     });
 
     $('body').empty();

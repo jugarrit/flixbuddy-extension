@@ -1,5 +1,6 @@
 node_modules
 app/scripts/
+app/styles/main.css
 temp
 .tmp
 dist

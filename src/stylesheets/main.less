@@ -1,3 +1,7 @@
+@flixbuddy-red: #e50914;
+@flixbuddy-grey: #bfc3c8;
+@flixbuddy-light-grey: #f4f4f4;
+
 html {
 	margin: 0;
 	padding: 0;
@@ -20,23 +24,23 @@ body {
 			padding-right: 13px;
 			color: black;
 			border-radius: 3px;
-			border: 1px solid #bfc3c8;
+			border: 1px solid @flixbuddy-grey;
 
 			::-webkit-input-placeholder {
-				color: #bfc3c8;
+				color: @flixbuddy-grey;
 			}
 			:-moz-placeholder {
 
 				/* Firefox 18- */
-				color: #bfc3c8;
+				color: @flixbuddy-grey;
 			}
 			::-moz-placeholder {
 
 				/* Firefox 19+ */
-				color: #bfc3c8;
+				color: @flixbuddy-grey;
 			}
 			:-ms-input-placeholder {
-				color: #bfc3c8;
+				color: @flixbuddy-grey;
 			}
 			&:focus {
 				outline: none;
@@ -50,7 +54,7 @@ body {
 			margin-bottom: 10px;
 			padding-left: 0;
 			padding-right: 0;
-			background-color: #e50914;
+			background-color: @flixbuddy-red;
 			color: white;
 			border: none;
 			border-radius: 3px;
@@ -66,6 +70,84 @@ body {
 			margin: auto;
 			margin-top: 80px;
 			margin-bottom: 40px;
+		}
+	}
+	.users-list {
+		.users-header {
+			margin-top: 50px;
+			padding-bottom: 15px;
+		}
+		.user-item {
+			padding: 20px 20px 20px 15px;
+			border-top: solid @flixbuddy-light-grey 1px;
+
+			&:last-child {
+				border-bottom: solid @flixbuddy-light-grey 1px;
+			}
+			height: 35px;
+
+			.user-connected {
+				float: left;
+			}
+			.user-section {
+				top: 3px;
+				padding-left: 40px;
+				position: relative;
+
+				.user-name {
+					font-weight: 600;
+					font-size: 14px;
+					top: -7px;
+					position: relative;
+
+					i {
+						font-size: 12px;
+						margin-left: 3px;
+						color: @flixbuddy-red;
+					}
+					.last-seen {
+						font-size: 12px;
+						color: @flixbuddy-grey;
+						font-weight: normal;
+					}
+				}
+				.user-status {
+					position: relative;
+					top: 7px;
+					color: @flixbuddy-grey;
+				}
+			}
+			.connect, .disconnect, .noop {
+				float: right;
+				position: relative;
+				top: -20px;
+				text-decoration: inherit;
+
+				i {
+					margin-right: 3px;
+					font-size: 12px;
+				}
+			}
+			.connect {
+				color: @flixbuddy-grey;
+
+				&:hover {
+					color: @flixbuddy-red;
+				}
+			}
+			.disconnect {
+				color: @flixbuddy-red;
+			}
+			.noop {
+				color: @flixbuddy-grey;
+
+				&:hover {
+					color: @flixbuddy-grey;
+				}
+			}
+		}
+		.title-image {
+			margin-left: 60px;
 		}
 	}
 }
