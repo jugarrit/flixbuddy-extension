@@ -33,13 +33,14 @@ function login(user) {
     var deferred = $.Deferred();
 
     userIdPromise.then(function(appUserId) {
+        user.appUserId = appUserId;
         if (appUserId) {
             var loginMessage = {
                 action: 'login',
                 firstName: user.firstName,
                 lastName: user.lastName,
                 email: user.email,
-                appUserId: appUserId
+                appUserId: user.appUserId
             };
 
             chrome.runtime.sendMessage(loginMessage, function() {
@@ -51,8 +52,8 @@ function login(user) {
     return deferred.promise();
 }
 
-function showUsersView() {
-    var currentUser;
+function showUsersView(user) {
+    var currentUser = user;
     var omitted = _(_.omit(userList, function(user) {
         if (user.appUserId === currentAppUserId) {
             currentUser = user;
@@ -80,7 +81,7 @@ function showLoginView() {
     loginView.on('login', function(user) {
         login(user).then(function() {
             $('body').empty();
-            showUsersView();
+            showUsersView(user);
         });
     });
 }

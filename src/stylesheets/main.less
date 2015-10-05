@@ -9,67 +9,71 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	height: 600px;
+	max-height: 600px;
 	width: 800px;
 
-	[data-ui-form] {
-		input {
-			display: block;
-			margin: auto;
-			width: 250px;
-			height: 30px;
-			margin-top: 10px;
-			margin-bottom: 10px;
-			padding-left: 13px;
-			padding-right: 13px;
-			color: black;
-			border-radius: 3px;
-			border: 1px solid @flixbuddy-grey;
+	.login {
+		margin-bottom: 50px;
 
-			::-webkit-input-placeholder {
-				color: @flixbuddy-grey;
-			}
-			:-moz-placeholder {
+		[data-ui-form] {
+			input {
+				display: block;
+				margin: auto;
+				width: 250px;
+				height: 30px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				padding-left: 13px;
+				padding-right: 13px;
+				color: black;
+				border-radius: 3px;
+				border: 1px solid @flixbuddy-grey;
 
-				/* Firefox 18- */
-				color: @flixbuddy-grey;
-			}
-			::-moz-placeholder {
+				::-webkit-input-placeholder {
+					color: @flixbuddy-grey;
+				}
+				:-moz-placeholder {
 
-				/* Firefox 19+ */
-				color: @flixbuddy-grey;
-			}
-			:-ms-input-placeholder {
-				color: @flixbuddy-grey;
-			}
-			&:focus {
-				outline: none;
-			}
-		}
-		button {
-			display: block;
-			margin: auto;
-			width: 280px;
-			height: 30px;
-			margin-bottom: 10px;
-			padding-left: 0;
-			padding-right: 0;
-			background-color: @flixbuddy-red;
-			color: white;
-			border: none;
-			border-radius: 3px;
-			margin-top: 50px;
-			font-size: 14px;
+					/* Firefox 18- */
+					color: @flixbuddy-grey;
+				}
+				::-moz-placeholder {
 
-			&:focus {
-				background-color: #c00900;
+					/* Firefox 19+ */
+					color: @flixbuddy-grey;
+				}
+				:-ms-input-placeholder {
+					color: @flixbuddy-grey;
+				}
+				&:focus {
+					outline: none;
+				}
 			}
-		}
-		.title-image {
-			display: block;
-			margin: auto;
-			margin-top: 80px;
-			margin-bottom: 40px;
+			button {
+				display: block;
+				margin: auto;
+				width: 280px;
+				height: 30px;
+				margin-bottom: 10px;
+				padding-left: 0;
+				padding-right: 0;
+				background-color: @flixbuddy-red;
+				color: white;
+				border: none;
+				border-radius: 3px;
+				margin-top: 50px;
+				font-size: 14px;
+
+				&:focus {
+					background-color: #c00900;
+				}
+			}
+			.title-image {
+				display: block;
+				margin: auto;
+				margin-top: 80px;
+				margin-bottom: 40px;
+			}
 		}
 	}
 	.users-list {
@@ -147,7 +151,28 @@ body {
 			}
 		}
 		.title-image {
-			margin-left: 60px;
+			margin-left: 55px;
+		}
+	}
+	.users-empty {
+		display: block;
+		margin: auto;
+		width: 367px;
+		margin-bottom: 60px;
+
+		.no-users-image {
+			margin: auto;
+			width: 128px;
+			position: relative;
+			display: block;
+			margin-bottom: 40px;
+		}
+		.no-users {
+			font-size: 20px;
+		}
+		.try-again {
+			margin-top: 10px;
+			font-size: 16px;
 		}
 	}
 }
